@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Experience from './pages/Experience';
+import Research from './pages/Research';
+import Publications from './pages/Publications';
+import Contact from './pages/Contact';
 import './App.css';
+import './Navbar.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="portfolio-container">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/publications" element={<Publications />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <footer>
+          <p>&copy; 2025 Mark Tyson W. | Kampala, Uganda</p>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
