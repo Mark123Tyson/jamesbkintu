@@ -2,7 +2,6 @@
 import React from 'react';
 import './styles/Publications.css';
 import { useNavigate } from 'react-router-dom';
-import '/home/mark/Desktop/james-kintu/my-portifolio/src/Navbar.css';
 
 export default function Publications() {
   const navigate = useNavigate();
