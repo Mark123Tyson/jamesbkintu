@@ -16,7 +16,7 @@
     "react-scroll": "^1.9.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Mark123Tyson.github.io/james-kintu-portifolio",
+  "homepage": ".",
 
   "scripts": {
     "start": "react-scripts start",
