@@ -2,7 +2,6 @@
 import React from 'react';
 import './styles/Experience.css';
 import { useNavigate } from 'react-router-dom';
-import '/home/mark/Desktop/james-kintu/my-portifolio/src/Navbar.css';
 
 const Experience = () => {
   const navigate = useNavigate();
