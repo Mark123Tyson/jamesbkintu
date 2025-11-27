@@ -1,0 +1,45 @@
+:root {
+  --blue-main: #2563eb;
+  --blue-light: #3b82f6;
+  --red-main: #ef4444;
+  --red-light: #f87171;
+
+  --bg-home: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+  --bg-content: rgba(30, 41, 59, 0.6);
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #334155;
+}
+
+/* ===== GOOGLE FONT IMPORT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+/* ===== GENERAL STYLES ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-home);
+  color: var(--text);
+  font-family: 'Poppins', 'Inter Tight', system-ui, sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* Add to your main CSS or Home section */
+@media (max-width: 768px) {
+  .home {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+
+/* ===== FOOTER - Always Centered ===== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
